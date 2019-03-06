@@ -1,7 +1,7 @@
 body {
     margin: 50px auto;
     width: 80%;
-    background-image: url(<a href="https://imgur.com/Okk17dn"><img src="https://i.imgur.com/Okk17dn.jpg" title="source: imgur.com" /></a>);
+    background-image: url(https://imgur.com/Okk17dn);
     background-color: #cccccc;
 }
 header {
