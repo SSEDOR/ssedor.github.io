@@ -78,7 +78,6 @@ header {
 .flex-container {
   display: flex;
   background-color: gainsboro;
-  flex-direction: row;
 }
 
 .flex-container > div {
