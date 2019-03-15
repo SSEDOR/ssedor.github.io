@@ -15,34 +15,6 @@
     </header>
         
     <hr style="border-width: 2px;">
-        
-
-        <p>
-            <div id="clockbox" style="font-size: 1.75vw; font-family: monospace; text-align: right; margin-right: 10px"></div>
-
-    <script type="text/javascript">
-    var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
-
-    function GetClock(){
-    var d=new Date();
-    var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
-
-    var nhour=d.getHours(),nmin=d.getMinutes(),ap;
-    if(nhour==0){ap=" AM";nhour=12;}
-    else if(nhour<12){ap=" AM";}
-    else if(nhour==12){ap=" PM";}
-    else if(nhour>12){ap=" PM";nhour-=12;}
-
-    if(nmin<=9) nmin="0"+nmin;
-
-    var clocktext=""+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+ap+"";
-    document.getElementById('clockbox').innerHTML=clocktext;
-    }
-
-    GetClock();
-    setInterval(GetClock,1000);
-    </script>
-    </p>
 
     <hr style="border-width: 2px;">
 
@@ -53,7 +25,12 @@
     </div>
 
     <div class="flex-container">
-  		<div><a class="twitter-timeline" href="https://twitter.com/Sedorkable?ref_src=twsrc%5Etfw" data-height="75vw">Tweets by Sedorkable</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+    	<div class="main-column">
+    		Test
+    	</div>
+  		<div class="sidebar-one">
+  			<a class="twitter-timeline" href="https://twitter.com/Sedorkable?ref_src=twsrc%5Etfw" data-height="50vw">Tweets by Sedorkable</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
 	</div>
    	
 
