@@ -100,7 +100,7 @@ header {
   order: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .flex-container {
     display: block;
   }
