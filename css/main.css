@@ -1,5 +1,6 @@
 body {
     background-color: gainsboro;
+    font-family: monospace;
 }
 
 p { 
@@ -33,43 +34,6 @@ header {
   border-width: medium;
 
 }
-
-.wrap {
-  margin: 5px;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
-.one-column {
-  padding: 2px;
-  border-color: black;
-  border-style: double;
-  float: left;
-  width: 20vw;
-  height: 50vw;
-}
-
-.two-column {
-  padding: 2px;
-  border-color: black;
-  border-style: double;
-  float: right;
-  width: 45vw;
-  height: 100px;
-}
-
 
 #navbar {
   overflow: hidden;
@@ -112,14 +76,35 @@ header {
 }
 
 .flex-container {
-  width: 50em;
   display: flex;
   background-color: gainsboro;
+  flex-direction: row;
 }
 
 .flex-container > div {
   background-color: #f1f1f1;
+  width: 100px;
   margin: 10px;
-  padding: 5px;
+  text-align: center;
+  line-height: 75px;
   font-size: 30px;
+}
+
+.main-column{
+  flex: 2;
+  order: 2
+}
+
+.sidebar-one{
+  flex: 1;
+  order: 1;
+}
+
+@media (max-width: 600px) {
+  .flex-container {
+    display: block;
+  }
+  .flex-container > div {
+    width: 90vw;
+  }
 }
