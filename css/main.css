@@ -4,8 +4,9 @@ body {
 }
 
 h1{
-  font-size: 7vw;
-  color: #C0C0C0;
+  font-size: 5vw;
+  color: white;
+  font-family: helevetica;
   
 }
 header {
@@ -13,7 +14,7 @@ header {
 }
 
 .main-header{
-  background-image: url('https://raw.githubusercontent.com/SSEDOR/ssedor.github.io/master/imagehost/greenleaf.jpg');
+  background-image: url('../imagehost/greenleaf.jpg');
   background-size: cover;
   background-position: center;
   padding: 15px;
@@ -41,10 +42,22 @@ header {
 }
 
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: white;
   color: black;
 }
 
+a:link, a:visited {
+  background-color: #333333;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover{
+  background-color: white;
+  color: black;
+}
 .row {  
   display: flex;
   flex-wrap: wrap;
@@ -68,12 +81,25 @@ header {
 }
 
 .side-2 {
+  flex: .5;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin: 2px;
+  order: 3; 
+}
+
+.side-3 {
   flex: 1;
   background-color: #f1f1f1;
   padding: 20px;
-  order: 2;
   margin: 2px;
-  order: 3; 
+  order: 4; 
+}
+
+.thePictures {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 700px) {
@@ -85,5 +111,11 @@ header {
   }
   .main{
     order: 1;
+  }
+  .side-2{
+    order: 3;
+  }
+  .side-3{
+    order: 4;
   }
 }
