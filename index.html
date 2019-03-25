@@ -17,27 +17,30 @@
 	</header>
 
     <div class="navbar">
- 	 	<a href="#">Link</a>
-  		<a href="#">Link</a>
-  		<a href="#">Link</a>
-  		<a href="#">Link</a>
+ 	 	<a href="#aboutMe">About Me</a>
+  		<a href="#twits">Tweets</a>
+  		<a href="#preReq">Prerequisites & Etc...</a>
+  		<a href="#pics">Picture Carousel</a>
 	</div>
 
 	<div class="row">
 
 		<div class="side-1">
-			<h2><a class="twitter-timeline" href="https://twitter.com/Sedorkable?ref_src=twsrc%5Etfw" data-height="400px">Tweets by Sedorkable</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></h2>
+			<h2 id="twits"><a class="twitter-timeline" href="https://twitter.com/Sedorkable?ref_src=twsrc%5Etfw" data-height="400px">Tweets by Sedorkable</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></h2>
 		</div>
 
 		<div class="main">
-			<h2>*About Me:</h2>
+			<h2 id="aboutMe">*About Me:</h2>
+			<p>I'm a transplant to the UK (Arizona → Hawaii → Washington DC → London → ?), and I am still scared everyday I am going to get run over because I will look the wrong way while crossing the street.</p>
+			<p>I have worked in the finance/real estate industry for nearly twenty years, mostly in a managerial role and team-leader. But, over the last few years I have started to look at making a change in my career path, and I figure there is no time like the present to do so.</p>
+			<p>I have focused on my professional photography, which you can find here, while also turning toward the charity sector. For over a year now I have been working with a non-profit group named, the Great British Community. Their primary focus is on combating prejudice, intolerance and discrimination in the UK, and we do so by showcasing diversity while looking for ways to bring communities together. I am in charge of all aspects of social media management while also helping to prepare and edit content.</p>
 		</div>
 
 	</div>
 
 	<div class="row">
 		
-		<div class="side-2">
+		<div id="preReq" class="side-2">
 			<h2>Prerequisites & Etc...</h2>
 			<a href="https://www.freecodecamp.org/ssedor" target="_blank"> freeCodeCamp <i class='fas fa-code'></i></a>
 			<br>
@@ -46,10 +49,13 @@
 		</div>
 
 		<div class="side-3">
-			<h2>Pictures</h2>
+			<h2 id="pics">Pictures</h2>
 			<img class="thePictures" src="imagehost/beehive.jpg">
 			<img class="thePictures" src="imagehost/romecity.jpg">
 			<img class="thePictures" src="imagehost/lighthouse.jpg">
+			<br>
+			<a class="backButton" style="float: right;" onclick="plusDivs(1)">❮</a>
+			<a class="nextButton" style="float: left" onclick="plusDivs(1)">❯</a>
 		</div>
 		<script>
 		var myIndex = 0;
@@ -67,6 +73,7 @@
     	setTimeout(carousel, 4000);
 		}
 		</script>
+
 	</div>
 
     </body>
