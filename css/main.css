@@ -94,14 +94,41 @@ a:hover{
   padding: 20px;
   margin: 2px;
   order: 4; 
+  position: relative;
 }
 
 .thePictures {
   display: block;
   width: 100%;
   height: auto;
+
 }
 
+.backButton{
+  border-radius: 50%;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  background-color: black;
+  position: absolute;
+  border: 5px white;
+  top: 50%;
+  left: 0%;
+}
+
+.nextButton{
+  border-radius: 50%;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  background-color: black;
+  position: absolute;
+  border: 5px white;
+  top: 50%;
+  right: 0%;
+}
 @media screen and (max-width: 700px) {
   .row, .navbar {   
     flex-direction: column;
