@@ -45,36 +45,66 @@
 			<a href="https://www.freecodecamp.org/ssedor" target="_blank"> freeCodeCamp <i class='fas fa-code'></i></a>
 			<br>
 			<br>
-			<a href="https://www.codewars.com/users/SSEDOR" target="_blank"> Codewars <i class='fas fa-terminal'></i></a>
 		</div>
+			<a href="https://www.codewars.com/users/SSEDOR" target="_blank"> Codewars <i class='fas fa-terminal'></i></a>
 
 		<div class="side-3">
 			<h2 id="pics">Pictures</h2>
-			<img class="thePictures" src="imagehost/beehive.jpg">
-			<img class="thePictures" src="imagehost/romecity.jpg">
-			<img class="thePictures" src="imagehost/lighthouse.jpg">
+			<img name="slide" class="images">
 			<br>
-			<a class="backButton" style="float: right;" onclick="plusDivs(1)">❮</a>
-			<a class="nextButton" style="float: left" onclick="plusDivs(1)">❯</a>
+			<a class="backButton" style="float: right" onclick="prevImage()"><</a>
+			<a class="nextButton" style="float: left" onclick="nextImg()">></a>
 		</div>
 		<script>
-		var myIndex = 0;
-		carousel();
+		var i = 0; 			
+		var image = [];	
+		var time = 6000;	
+	 
+		image[0] = "imagehost/lighthouse.jpg";
+		image[1] = "imagehost/romecity.jpg";
+		image[2] = "imagehost/beehive.jpg";
 
-		function carousel() {
-    	var i;
-    	var x = document.getElementsByClassName("thePictures");
-    	for (i = 0; i < x.length; i++) {
-       	x[i].style.display = "none";  
-    	}
-    	myIndex++;
-    	if (myIndex > x.length) {myIndex = 1}    
-    	x[myIndex-1].style.display = "block";  
-    	setTimeout(carousel, 4000);
+		function newImg(){
+		document.slide.src = image[i];
+
+		
+		if(i < image.length - 1){
+	  	i++; 
+		} else { 
+		i = 0;
 		}
-		</script>
 
-	</div>
+		setTimeout("newImg()", time);
+		}
+
+		window.onload=newImg;
+
+
+		function prevImage(){
+			if (i > 0){
+				document.slide.src = image[i - 1];
+				i--;
+			} else {
+				document.slide.src = image[image.length - 1];
+				i = image.length - 1;
+			}
+		  }
+		  
+		function nextImg(){
+			if (i <  image.length - 1){
+				document.slide.src = image[i + 1];
+				i++;
+			} else {
+				document.slide.src = image[0];
+				i = 0;
+			}
+
+		
+		}
+
+		</script>
+	
+		</div>
 
     </body>
 </html>
