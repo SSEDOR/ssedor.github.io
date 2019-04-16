@@ -45,8 +45,8 @@
 			<a href="https://www.freecodecamp.org/ssedor" target="_blank"> freeCodeCamp <i class='fas fa-code'></i></a>
 			<br>
 			<br>
-		</div>
 			<a href="https://www.codewars.com/users/SSEDOR" target="_blank"> Codewars <i class='fas fa-terminal'></i></a>
+		</div>	
 
 		<div class="side-3">
 			<h2 id="pics">Pictures</h2>
@@ -54,6 +54,8 @@
 			<br>
 			<a class="backButton" style="float: right" onclick="prevImage()"><</a>
 			<a class="nextButton" style="float: left" onclick="nextImg()">></a>
+			<a class="PauseButton" display="center" onclick="time=0">=</a>
+			<a class="PlayButton" display="center" onclick="time=6000">></a>
 		</div>
 		<script>
 		var i = 0; 			
@@ -98,9 +100,8 @@
 				document.slide.src = image[0];
 				i = 0;
 			}
+		  }
 
-		
-		}
 
 		</script>
 	
