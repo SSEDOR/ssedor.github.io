@@ -54,7 +54,7 @@
 			<br>
 			<a class="backButton" style="float: right" onclick="prevImage()"><</a>
 			<a class="nextButton" style="float: left" onclick="nextImg()">></a>
-			<a class="PauseButton" display="center" onclick="time=0">=</a>
+			<a class="PauseButton" display="center" onclick="pause()">=</a>
 			<a class="PlayButton" display="center" onclick="time=6000">></a>
 		</div>
 		<script>
@@ -102,6 +102,10 @@
 			}
 		  }
 
+		function pause(){
+			clearInterval(time);
+			time = null;
+		}
 
 		</script>
 	
