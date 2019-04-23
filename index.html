@@ -54,17 +54,20 @@
 			<br>
 			<a class="backButton" style="float: right" onclick="prevImage()"><</a>
 			<a class="nextButton" style="float: left" onclick="nextImg()">></a>
-			<a class="PauseButton" display="center" onclick="pause()">=</a>
+			<a class="PauseButton" display="center" onclick="pause()>=</a>
 			<a class="PlayButton" display="center" onclick="time=6000">></a>
 		</div>
 		<script>
-		var i = 0; 			
+		window.onload=newImg;		
+		let i = 0; 			
 		var image = [];	
-		var time = 6000;	
+		var time = 4000;	
 	 
 		image[0] = "imagehost/lighthouse.jpg";
-		image[1] = "imagehost/romecity.jpg";
-		image[2] = "imagehost/beehive.jpg";
+		image[1] = "imagehost/beehive.jpg";
+		image[2] = "imagehost/outerball.jpg";
+		image[3] = "imagehost/bnwarch.jpg";
+		image[4] = "imagehost/parisstreet.jpg";
 
 		function newImg(){
 		document.slide.src = image[i];
@@ -78,8 +81,6 @@
 
 		setTimeout("newImg()", time);
 		}
-
-		window.onload=newImg;
 
 
 		function prevImage(){
@@ -102,11 +103,12 @@
 			}
 		  }
 
-		function pause(){
-			time = null; 
+		  function pause(){
 			clearInterval(time);
+			time = null; 
 	
 		}
+		
 
 		</script>
 	
