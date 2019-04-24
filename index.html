@@ -1,8 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<link rel="stylesheet" type="text/css" href="/css/main.css">
-  
-<header>First Webpage</header>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+
+ 	<header class="main-header">
+  		<h1> ~ Steve {stiːvə} Sedor {siːdːo(r)} ~ </h1>
+	</header>
+
+    <div class="navbar">
+ 	 	<a href="#aboutMe">About Me</a>
+  		<a href="#twits">Tweets</a>
+  		<a href="#preReq">Prerequisites & Etc...</a>
+  		<a href="#pics">Picture Carousel</a>
+	</div>
+
+	<div class="row">
+
+		<div class="side-1">
+			<h2 id="twits"><a class="twitter-timeline" href="https://twitter.com/Sedorkable?ref_src=twsrc%5Etfw" data-height="400px">Tweets by Sedorkable</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></h2>
+		</div>
+
+		<div class="main">
+			<h2 id="aboutMe">*About Me:</h2>
+			<p>
+I'm a transplant to the UK (Arizona → Hawaii → Washington DC → London → ?), and I am still scared everyday I am going to get run over because I will look the wrong way while crossing the street.
+<br>
+<br>
+I have worked in the Finance/Real Estate industry for nearly twenty years, mostly in a managerial role and team-leader. But, over the last few years I have started to look at making a change in my career path, and I figure there is no time like the present to do so. I grew up in a poorer Latino community in Arizona, and was never really exposed to Computer Science as a viable career option. Most of the people where I come from never get past a high-school degree, so I’m already an outsider in that I completed college in the first place. 
+<br>
+<br>
+Recently I have focused on my professional photography, which you can find here, while also working in the non-profit sector. For over a year now I have been working with a non-profit group named, LinkUp UK. Their primary focus is on combating prejudice, intolerance and discrimination in the UK, and we do so by showcasing diversity while looking for ways to bring communities together. I am in charge of all aspects of social media management while also helping to prepare and edit content. It is a fulfilling position, and I am learning every day, while hopefully helping to educate people about these important topics. 
+<br>
+<br>
+In looking for a program to learn coding, I came across Founders & Coders, and I found it to be a unique and interesting prospect. Their clear message about utilizing web development in concert within the value of community and partnership resonated with me. Most programs seem to focus on status and monetary validation, but Founders and Coders has a message that aligned more with my own personal values.
+<br>
+<br>
+I would like to find a career that I feel is fulfilling, outside of just compensation, and apart from what I have done in the past. The future for society seems to be more and more based online, and organizations such as non-profits need help moving their operations into a digital landscape. I think my past business knowledge and the educational value of this program would help move me toward my future goals and ideas. 
+<br>
+<br>
+I have for a long time had jobs, but never really a career, something that I could feel passionate about. Initially I was wary of going down the road of programming, it seemed out of reach for me, and too far outside my skill-set. But, in doing the research and the coding prerequisites, I have found that I keep wanting to do and learn more. I have also come to the realization that having matured I have become a better student/learner, I wish I could go back and tell my younger self to focus and maybe skip the pub once in awhile. 
+<br>
+<br>
+I truly hope to be chosen for the Founders and Coders program, it feels like the perfect stepping stone to a new stage in my career. I also look to be mentor to others that may share my background and open possibilities for them in the future with the knowledge I gain. I’m eager to join the program, and hope to be chosen from the number of qualified applicants, fingers crossed for the future.
+<br>
+<br>
+SS
+</p>
+		</div>
+
+	</div>
+
+	<div class="row">
+		
+		<div id="preReq" class="side-2">
+			<h2>Prerequisites & Etc...</h2>
+			<a href="https://www.freecodecamp.org/ssedor" target="_blank"> freeCodeCamp <i class='fas fa-code'></i></a>
+			<br>
+			<br>
+			<a href="https://www.codewars.com/users/SSEDOR" target="_blank"> Codewars <i class='fas fa-terminal'></i></a>
+		</div>	
+
+		<div class="side-3">
+			<h2 id="pics">Pictures</h2>
+			<img name="slide" class="images">
+			<br>
+			<a class="backButton" style="float: right" onclick="prevImage()"><</a>
+			<a class="nextButton" style="float: left" onclick="nextImg()">></a>
+			<a class="PauseButton" display="center" onclick="pause()">=</a>
+			<a class="PlayButton" display="center" onclick="play()">></a>
+		</div>
+		<script>
+
+		window.onload=play;
+
+		var i = 0; 			
+		var image = [];	
+		var time = 4000;
+		var t;	
+	 
+		image[0] = "imagehost/lighthouse.jpg";
+		image[1] = "imagehost/beehive.jpg";
+		image[2] = "imagehost/outerball.jpg";
+		image[3] = "imagehost/bnwarch.jpg";
+		image[4] = "imagehost/parisstreet.jpg";
+
+		
+
+		function newImg(){
+
+			document.slide.src = image[i];
+
+			
+			if(i < image.length - 1){
+		  		i++; 
+			} else { 
+				i = 0;
+			}
+
+		}
+
+		function play() {
+			t = setInterval(newImg,2000);
+		}
+
+		function pause(){
+			clearInterval(t);
+		}
+
+		function prevImage(){
+			if (i > 0){
+				document.slide.src = image[i - 1];
+				i--;
+			} else {
+				document.slide.src = image[image.length - 1];
+				i = image.length - 1;
+			}
+		  }
+		  
+		function nextImg(){
+			if (i <  image.length - 1){
+				document.slide.src = image[i + 1];
+				i++;
+			} else {
+				document.slide.src = image[0];
+				i = 0;
+			}
+		  }
+
+
+		
+
+		</script>
+	
+		</div>
+
+    </body>
 </html>
